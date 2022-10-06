@@ -1,0 +1,25 @@
+.list {
+  color: #fff;
+  width: 300px;
+  margin: 20px auto;
+  height: 50px;
+  background-color: #bf07ac;
+  border-radius: 5px;
+}
+
+.list input {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 18px;
+  transition: ease-in-out;
+}
+.list input:focus {
+  outline: none;
+}
+
+.fa-trash {
+  margin: 0 5px;
+  font-size: 15px;
+  cursor: pointer;
+}

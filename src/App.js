@@ -10,6 +10,7 @@ export default function App() {
     seti(e.target.value);
   };
   const addItem = (e) => {
+    if (item === "") return;
     setarr([...arr, item]);
     seti("");
   };
@@ -32,12 +33,15 @@ export default function App() {
 
   return (
     <div className="App">
-     <h1 className="head">My Todo List</h1>
+      <h1 style={{ marginTop: "15px" }}>My Todo List</h1>
       <input
         className="input"
         placeholder="Add your task here"
         value={item}
         onChange={(e) => changeHandle(e)}
+        onKeyDown={(e) => {
+          e.keyCode === 13 ? addItem() : null;
+        }}
       />
       <button onClick={addItem}>
         <i className="fa-solid fa-plus"></i>

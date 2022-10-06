@@ -32,6 +32,7 @@ export default function App() {
 
   return (
     <div className="App">
+     <h1 className="head">My Todo List</h1>
       <input
         className="input"
         placeholder="Add your task here"

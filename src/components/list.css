@@ -5,6 +5,7 @@
   height: 50px;
   background-color: #bf07ac;
   border-radius: 5px;
+  display:flex
 }
 
 .list input {
@@ -19,7 +20,7 @@
 }
 
 .fa-trash {
-  margin: 0 5px;
+  margin: auto 5px;
   font-size: 15px;
   cursor: pointer;
 }

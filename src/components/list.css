@@ -13,15 +13,21 @@
   border: 0;
   color: #fff;
   font-size: 18px;
-  transition: ease-in-out;
+  /* transition: ease-in-out; */
   margin-left: 0.4rem;
 }
 .list input:focus {
   outline: none;
+}
+.list span {
+  font-size: 8px;
+
+  margin: auto;
 }
 
 .fa-trash {
   margin: auto 5px;
   font-size: 15px;
   cursor: pointer;
+  margin-right: 1rem;
 }

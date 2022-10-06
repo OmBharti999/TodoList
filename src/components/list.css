@@ -5,7 +5,7 @@
   height: 50px;
   background-color: #bf07ac;
   border-radius: 5px;
-  display:flex
+  display: flex;
 }
 
 .list input {
@@ -14,6 +14,7 @@
   color: #fff;
   font-size: 18px;
   transition: ease-in-out;
+  margin-left: 0.4rem;
 }
 .list input:focus {
   outline: none;

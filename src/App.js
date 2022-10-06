@@ -1,9 +1,14 @@
 import "./styles.css";
 import List from "./components/List";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
+const getDate = () => {
+  let data = localStorage.getItem("WorkList");
+  console.log(data);
+  return data ? JSON.parse(data) : [];
+};
 export default function App() {
-  const [arr, setarr] = useState(["eat apple", "bath", "call", "draw", "eat"]);
+  const [arr, setarr] = useState(getDate());
   const [item, seti] = useState("");
 
   const changeHandle = (e) => {
@@ -30,6 +35,10 @@ export default function App() {
 
     setarr([...newArr]);
   };
+
+  useEffect(() => {
+    localStorage.setItem("WorkList", JSON.stringify(arr));
+  }, [arr]);
 
   return (
     <div className="App">

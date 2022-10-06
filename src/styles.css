@@ -12,7 +12,9 @@ body {
   margin: 40px auto;
   padding-bottom: 40px;
 }
-
+.head {
+  padding-top: 15px;
+}
 .input {
   background-color: #ade8f4;
   border: 0;

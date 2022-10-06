@@ -3,7 +3,7 @@ import List from "./components/List";
 import { useState } from "react";
 
 export default function App() {
-  const [arr, setarr] = useState(["a", "b", "c", "d","a", "b", "c", "d","a", "b", "c", "e","a", "b", "c", "d"]);
+  const [arr, setarr] = useState(["eat apple", "bath", "call", "draw", "eat"]);
   const [item, seti] = useState("");
 
   const changeHandle = (e) => {
@@ -14,23 +14,32 @@ export default function App() {
     seti("");
   };
   const del = (i) => {
-    const filArr = arr.filter((item, index) => index != i);
-    setarr(filArr);
+    console.log(arr);
+
+    const filArr = arr.filter((item, index) => index !== i);
+    setarr([...filArr]);
   };
   const edit = (text, i) => {
+    console.log(text, i);
+
     const newArr = arr.map((item, index) => {
-      if (index == i) {
-        item = text;
-      }
+      return index === i ? text : item;
     });
-    setarr(newArr);
+    console.log("newArr", newArr);
+
+    setarr([...newArr]);
   };
 
   return (
     <div className="App">
-      <input className="input" placeholder="Add your task here" value={item} onChange={(e) => changeHandle(e)} />
+      <input
+        className="input"
+        placeholder="Add your task here"
+        value={item}
+        onChange={(e) => changeHandle(e)}
+      />
       <button onClick={addItem}>
-        <i class="fa-solid fa-plus"></i>
+        <i className="fa-solid fa-plus"></i>
       </button>
       <List arr={arr} del={del} edit={edit} />
     </div>
